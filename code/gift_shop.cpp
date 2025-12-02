@@ -26,6 +26,29 @@ bool invalid(ll num){
 	string second= a.substr(split);
 	return first == second;
 }
+bool isInvalidID_Part2(ll num) {
+    string s = to_string(num);
+    int len = s.length();
+
+    // I will  try every possible chunk size 'k'
+    // it should and must be less than or equal to len / 2 (so it repeats at least twice)
+    for (int k = 1; k <= len / 2; ++k) {
+        if (len % k == 0) {
+            string pattern = s.substr(0, k);
+            string ret = "";
+            int rep = len / k;
+            for (int r = 0; r < rep; ++r) {
+                ret += pattern;
+            }
+            if (ret == s) {
+                return true; 
+            }
+        }
+    }
+
+    return false;
+}
+
 int main() {
     // The input string from the problem
     string input;cin>>input;  //make sure it works for large for large input 
