@@ -1,38 +1,38 @@
-// #include <bits/stdc++.h>
-// #include <string>
-// #include <vector>
-// #include <cstdio>
-// using namespace std;
+#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+#include <cstdio>
+using namespace std;
 
-// /*
-//    Our major motive is nothing but we have to find out the count of 
-//    fresh ingredients within the ingredients id.
+/*
+   Our major motive is nothing but we have to find out the count of 
+   fresh ingredients within the ingredients id.
 
-//    major condition is that, we have been given a fresh ingredient ID range.
-//    example (3-5): inclusive this means {3,4,5}
-//    now assume that in the ingredient id, there is 1. 
-//    We cannot consider 1 as fresh ingredient id !! Why 
-//    Simply because it was not in the range of {3-5}
+   major condition is that, we have been given a fresh ingredient ID range.
+   example (3-5): inclusive this means {3,4,5}
+   now assume that in the ingredient id, there is 1. 
+   We cannot consider 1 as fresh ingredient id !! Why 
+   Simply because it was not in the range of {3-5}
 
-// so if not in the range of fresh ingredients id 
-// 		then  flag it as non fresh 
-// 		return the count of fresh ingredient id in  ingredient id list 
-// */
+so if not in the range of fresh ingredients id 
+		then  flag it as non fresh 
+		return the count of fresh ingredient id in  ingredient id list 
+*/
 
-// void a(){
-// 	string a = "12-15";
-// 	int number = 7;
-// 	int start;
-// 	int end;
-// 	//now wee need to parse this 
-// 	if(sscanf(a.c_str(),"%d-%d",&start,&end)==2){
-// 		if(number >=start && number <=end){
-// 			cout<<"Yes"<<endl;
-// 		}else{
-// 			cout<<"No"<<endl;
-// 		}
-// 	}
-// }
+void newthingy(){
+	string a = "12-15";
+	int number = 7;
+	int start;
+	int end;
+	//now wee need to parse this 
+	if(sscanf(a.c_str(),"%d-%d",&start,&end)==2){
+		if(number >=start && number <=end){
+			cout<<"Yes"<<endl;
+		}else{
+			cout<<"No"<<endl;
+		}
+	}
+}
 
 
 struct Range {
@@ -69,7 +69,8 @@ int main() {
     return 0;
 }
 
-// second approach much more optimal or preferef
+// second approach much more optimal or preferef 
+// at the end perforned the part 2 op, main head remains the same.
 
 vector<pair<long long, long long>> ranges;
 
