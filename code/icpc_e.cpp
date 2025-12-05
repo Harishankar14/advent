@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using  namespace std;
+typedef long long ll;
 /*
    so here, we basically have to pick some random color 
    as target, and match it with the other ones.
@@ -19,10 +20,10 @@ using  namespace std;
 */
 int solve(){
 	string s;cin>>s;
-	int n=s.length();
-	int red_count=0;
-	int green_count =0;
-	int blue_count =0;
+	ll n=s.length();
+	ll red_count=0;
+	ll green_count =0;
+	ll blue_count =0;
 
 	// we move to count the fre
 	for(char c:s){
@@ -31,11 +32,11 @@ int solve(){
 		if(c=='b') blue_count++;
 	}
 	// we need to find the value which occurs max 
-	int mac=max({red_count,green_count,blue_count});
-	int ans= 3*(n-mac);  // total - max 
+	ll mac=max({red_count,green_count,blue_count});
+	ll ans= 3*(n-mac);  // total - max 
 	return ans;
 }
 int main(){
-	int res=solve();
+	ll res=solve();
 	cout<<res<<endl;
 }
